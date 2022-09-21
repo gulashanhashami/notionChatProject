@@ -1,9 +1,4 @@
 
-// import { getDatabase, ref, child, get } from "firebase/database";
-  // Import the functions you need from the SDKs you need
-//   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -21,6 +16,7 @@
     const auth = app.auth();
 //   console.log(app)
 
+//**function for add users**//
 function addUsers()
 {
   var firstName = document.getElementById("firstName").value;   
@@ -47,6 +43,8 @@ function addUsers()
   // $("#chatPopup").show();
 
 }
+
+// **function for send chat message to firebase**//
 function sendChatData()
 {
   var username = JSON.parse(localStorage.getItem("userName"))
@@ -66,7 +64,7 @@ function sendChatData()
   
 }
 
-
+//**function for get all message data from firebase**//
 function getAllMessageData(){
  
    var allMessageData=[];
@@ -84,7 +82,7 @@ function getAllMessageData(){
 
   //  console.log( msg)
   
-
+//**function for display the messages on browser **//
 function displayData(item){
   var containchat=document.getElementById("showChatBox");
   containchat.scrollTop = containchat.scrollHeight;
@@ -133,7 +131,7 @@ function displayData(item){
   containchat.append(messageDiv);
 }
 window.onload=getAllMessageData;
-
+//**function for logout**//
 function logoutFunct(){
   console.log("here")
   window.open("userjoinChat.html");
