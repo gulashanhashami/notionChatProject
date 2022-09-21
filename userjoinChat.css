@@ -1,0 +1,100 @@
+
+.userMessage{
+    text-align: start;
+
+}
+.myMessage{
+    text-align: end;
+}
+
+.messageBox{
+    width: 70%;
+    padding-bottom: 2px;
+    border: 1px solid grey;
+   /* height: 10vh; */
+   /* line-height: 5px; */
+   margin: auto;
+   vertical-align: middle;
+   border-radius: .3vw;
+}
+.usernamebox{
+   display:flex;
+   /* position: relative; */
+  
+   height: 5vh;
+    flex-direction:row; 
+    /* align-items: baseline; */
+    /* border:1px solid red;  */
+    gap:1%; 
+    /* vertical-align:middle; */
+    align-items: center;
+    justify-content: end;
+    padding-right: 2%;
+    background-color: green;
+    color: white;
+    border-radius: .3vw;
+}
+
+.usernamebox1{
+    display:flex;
+    height: 5vh;
+     flex-direction:row; 
+     /* align-items: baseline; */
+     /* border:1px solid red;  */
+     gap:1%; 
+     /* vertical-align:middle; */
+     align-items: center;
+     padding-left: 2%;
+     background-color: teal;
+     color: white;
+     border-radius: .3vw;
+ }
+.messageData{
+
+    
+   padding: 2%;
+}
+.chatPopupDiv{
+    width: 99%; 
+    height: 85vh; 
+    margin-top: 4%;
+    padding-bottom: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.chatBoxDiv{
+    width: 95%;
+     height: 65vh;
+      /* border: 1px solid green;  */
+      overflow-y: scroll;
+       position: relative;
+        padding: 2%;
+}
+.enterMessageDiv{
+    width: 70%;
+    margin: auto;
+     height:7vh;
+      border:.1vw solid gray;
+       margin-top: 2%;
+        display: flex; 
+        flex-direction: row;
+         justify-content: space-between;
+          padding-left: 2%;
+          border-radius: .3vw;
+}
+.messageInputBox{
+    width: 95%; 
+    height:88%;
+    border-top: none;
+    border-bottom: none;
+    padding-left: 2%;
+    outline: none;
+    border-right: .1vw solid gray;
+    border-left: .1vw solid gray;
+}
+.loginPopup{
+    width: 25%;
+     margin-left: 30%;
+      margin-top: 10%;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 3%;
+}
