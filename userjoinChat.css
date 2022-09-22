@@ -1,4 +1,6 @@
-
+*{
+    font-family: sans-serif;
+}
 .userMessage{
     text-align: start;
 
@@ -9,50 +11,43 @@
 
 .messageBox{
     width: 70%;
-    padding-bottom: 2px;
+   height: auto;
     border: 1px solid grey;
-   /* height: 10vh; */
-   /* line-height: 5px; */
    margin: auto;
    vertical-align: middle;
+   /* border:1px solid red; */
    border-radius: .3vw;
+   margin-top: 1.5%;
 }
 .usernamebox{
+    font-family: Arial;
    display:flex;
-   /* position: relative; */
-  
+ 
    height: 5vh;
     flex-direction:row; 
-    /* align-items: baseline; */
-    /* border:1px solid red;  */
     gap:1%; 
-    /* vertical-align:middle; */
     align-items: center;
     justify-content: end;
     padding-right: 2%;
-    background-color: green;
-    color: white;
     border-radius: .3vw;
 }
 
 .usernamebox1{
+    font-family:  Arial;
     display:flex;
     height: 5vh;
      flex-direction:row; 
-     /* align-items: baseline; */
-     /* border:1px solid red;  */
      gap:1%; 
      /* vertical-align:middle; */
      align-items: center;
      padding-left: 2%;
-     background-color: teal;
-     color: white;
      border-radius: .3vw;
  }
 .messageData{
 
-    
-   padding: 2%;
+    color: white;
+   padding-left: 2%;
+   padding-right: 2%;
 }
 .chatPopupDiv{
     width: 99%; 
@@ -62,12 +57,13 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .chatBoxDiv{
-    width: 95%;
+    width: 85%;
      height: 65vh;
       /* border: 1px solid green;  */
       overflow-y: scroll;
        position: relative;
         padding: 2%;
+        background-color: #ddeef8;
 }
 .enterMessageDiv{
     width: 70%;
@@ -97,4 +93,5 @@
       margin-top: 10%;
        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         padding: 3%;
+        /* color:#668aac; */
 }

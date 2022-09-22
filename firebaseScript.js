@@ -13,7 +13,7 @@
   // Initialize Firebase
   var app = firebase.initializeApp(firebaseConfig);
     const db = app.firestore();
-    const auth = app.auth();
+    // const auth = app.auth();
 //   console.log(app)
 
 //**function for add users**//
@@ -67,7 +67,6 @@ function sendChatData()
 //**function for get all message data from firebase**//
 function getAllMessageData(){
  
-   var allMessageData=[];
    db.collection("chat").orderBy("time").onSnapshot(allMessage => {
     document.getElementById("showChatBox").innerHTML=""
     allMessage.forEach(item => {
@@ -90,7 +89,7 @@ function displayData(item){
   var username = JSON.parse(localStorage.getItem("userName")).resUser;
   if (item.userName == username) {
     messageDiv.innerHTML = `
-        <div class="myMessage messageBox">
+        <div class="myMessage messageBox" style=" background-color: green;">
         <div class="usernamebox">
         <img width="20px" height=20px src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>${item.userName}</small></p>
@@ -103,7 +102,7 @@ function displayData(item){
   }
   else if (item.userName == undefined) {
     messageDiv.innerHTML = `
-        <div class="userMessage messageBox">
+        <div class="userMessage messageBox" style=" background-color:teal;">
         <div class="usernamebox1">
         <img width="20px" height=20px  position: absolute; src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>Anonymous</small></p>
@@ -116,7 +115,7 @@ function displayData(item){
   }
   else {
     messageDiv.innerHTML = `
-        <div class="userMessage messageBox">
+        <div class="userMessage messageBox" style=" background-color:teal;">
         <div class="usernamebox1">
         <img width="20px" height=20px src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>${item.userName}</small></p>
@@ -134,6 +133,6 @@ window.onload=getAllMessageData;
 //**function for logout**//
 function logoutFunct(){
   console.log("here")
-  window.open("userjoinChat.html");
+  window.open("index.html");
 }
 // displayData();
