@@ -3,10 +3,12 @@
 }
 .userMessage{
     text-align: start;
+    padding-right: 2%;
 
 }
 .myMessage{
     text-align: end;
+    padding-right: 2%;
 }
 
 .messageBox{
@@ -18,36 +20,61 @@
    /* border:1px solid red; */
    border-radius: .3vw;
    margin-top: 1.5%;
+   padding-right: 2%;
 }
 .usernamebox{
     font-family: Arial;
    display:flex;
+   font-size: 1.2vw;
  
-   height: 5vh;
+   height: 4vh;
     flex-direction:row; 
-    gap:1%; 
+    gap:1.5%; 
     align-items: center;
     justify-content: end;
     padding-right: 2%;
+    padding-top: 1%;
     border-radius: .3vw;
 }
 
 .usernamebox1{
     font-family:  Arial;
     display:flex;
-    height: 5vh;
+    font-size: 1.2vw;
+    
+    height: 4vh;
      flex-direction:row; 
      gap:1%; 
      /* vertical-align:middle; */
      align-items: center;
      padding-left: 2%;
+     padding-top: 1%;
      border-radius: .3vw;
+    
  }
+ .titletext{
+    font-size: 1.5vw; 
+}
+
+ @media only screen and (max-width: 600px) {
+.usernamebox1{
+    font-size: 3.5vw;
+}
+.usernamebox{
+    font-size: 3.5vw; 
+}
+.titletext{
+    font-size: 3.8vw; 
+}
+
+}
+
+
 .messageData{
 
     color: white;
    padding-left: 2%;
-   padding-right: 2%;
+   padding-right: 10px;
 }
 .chatPopupDiv{
     width: 99%; 
@@ -55,6 +82,7 @@
     margin-top: 4%;
     padding-bottom: 2%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ddeef8;
 }
 .chatBoxDiv{
     width: 85%;
@@ -76,6 +104,7 @@
          justify-content: space-between;
           padding-left: 2%;
           border-radius: .3vw;
+          background-color: white;
 }
 .messageInputBox{
     width: 95%; 

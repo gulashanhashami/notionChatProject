@@ -22,7 +22,7 @@ function addUsers()
   var firstName = document.getElementById("firstName").value;   
   var lastName=document.getElementById("lastName").value;
    if(firstName.length<4 || lastName.length<4){
-    alert("Please enter atleast four charecters")
+    alert("Please enter atleast four charecters for each input box")
     return
    }
   firebase.firestore().collection("users")
@@ -76,15 +76,16 @@ function getAllMessageData(){
     
 })
 
-    // console.log( msg)
    }
 
-  //  console.log( msg)
   
 //**function for display the messages on browser **//
 function displayData(item){
   var containchat=document.getElementById("showChatBox");
-  containchat.scrollTop = containchat.scrollHeight;
+   var time1=new Date(item.time)
+  //  console.log(time1.toLocaleString('en-US'))
+  containchat.scrollTop = containchat.scrollHeight; //code for auto scroll to see new message on chatbox
+
   var messageDiv=document.createElement("div");
   var username = JSON.parse(localStorage.getItem("userName")).resUser;
   if (item.userName == username) {
@@ -92,7 +93,8 @@ function displayData(item){
         <div class="myMessage messageBox" style=" background-color: green;">
         <div class="usernamebox">
         <img width="20px" height=20px src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
-            <p><small>${item.userName}</small></p>
+            <p><small>${item.userName} ,</small></p>
+            <p><small>${time1.toLocaleString('en-US')}</small></p>
             </div>
             <p class="messageData" style="padding-right:2%;">${item.message}</p>
            
@@ -105,7 +107,8 @@ function displayData(item){
         <div class="userMessage messageBox" style=" background-color:teal;">
         <div class="usernamebox1">
         <img width="20px" height=20px  position: absolute; src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
-            <p><small>Anonymous</small></p>
+            <p><small>Anonymous ,</small></p>
+            <p><small>${time1.toLocaleString('en-US')}</small></p>
             </div>
             <p class="messageData">${item.message}</p>
           
@@ -118,7 +121,8 @@ function displayData(item){
         <div class="userMessage messageBox" style=" background-color:teal;">
         <div class="usernamebox1">
         <img width="20px" height=20px src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
-            <p><small>${item.userName}</small></p>
+            <p><small>${item.userName} ,</small></p>
+            <p><small>${time1.toLocaleString('en-US')}</small></p>
            
             </div>
             <p class="messageData">${item.message}</p>
@@ -132,7 +136,7 @@ function displayData(item){
 window.onload=getAllMessageData;
 //**function for logout**//
 function logoutFunct(){
-  console.log("here")
+  // console.log("here")
   window.open("index.html");
 }
-// displayData();
+
