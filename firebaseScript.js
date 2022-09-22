@@ -87,6 +87,7 @@ function displayData(item){
   containchat.scrollTop = containchat.scrollHeight; //code for auto scroll to see new message on chatbox
 
   var messageDiv=document.createElement("div");
+  
   var username = JSON.parse(localStorage.getItem("userName")).resUser;
   if (item.userName == username) {
     messageDiv.innerHTML = `
@@ -101,10 +102,11 @@ function displayData(item){
            
         </div>
     `
+    
   }
   else if (item.userName == undefined) {
     messageDiv.innerHTML = `
-        <div class="userMessage messageBox" style=" background-color:teal;">
+        <div class="userMessage messageBox" style=" background-color:teal; ">
         <div class="usernamebox1">
         <img width="20px" height=20px  position: absolute; src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>Anonymous ,</small></p>
@@ -115,6 +117,7 @@ function displayData(item){
            
         </div>
     `
+  
   }
   else {
     messageDiv.innerHTML = `
@@ -130,7 +133,9 @@ function displayData(item){
             
         </div>
     `
+   
   }
+ 
   containchat.append(messageDiv);
 }
 window.onload=getAllMessageData;

@@ -2,53 +2,57 @@
     font-family: sans-serif;
 }
 .userMessage{
-    text-align: start;
+    float: left;
+    /* text-align: start; */
     padding-right: 2%;
 
 }
 .myMessage{
-    text-align: end;
+    float: right;
+    /* text-align: end; */
     padding-right: 2%;
 }
 
 .messageBox{
-    width: 70%;
+   
+    width: 60%;
    height: auto;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
    margin: auto;
    vertical-align: middle;
    /* border:1px solid red; */
-   border-radius: .3vw;
    margin-top: 1.5%;
    padding-right: 2%;
+   border-radius: 1vw;
 }
 .usernamebox{
-    font-family: Arial;
+    font-family: sans-serif;
    display:flex;
    font-size: 1.2vw;
- 
+ color: white;
    height: 4vh;
     flex-direction:row; 
-    gap:1.5%; 
+    /* gap:1%;  */
     align-items: center;
-    justify-content: end;
+    /* justify-content: end; */
     padding-right: 2%;
-    padding-top: 1%;
+    padding-left: 2%;
+    padding-top: 1.5%;
     border-radius: .3vw;
 }
 
 .usernamebox1{
-    font-family:  Arial;
+    font-family: sans-serif;
     display:flex;
     font-size: 1.2vw;
-    
+    color: white;
     height: 4vh;
      flex-direction:row; 
      gap:1%; 
      /* vertical-align:middle; */
      align-items: center;
      padding-left: 2%;
-     padding-top: 1%;
+     padding-top: 1.5%;
      border-radius: .3vw;
     
  }
@@ -56,12 +60,14 @@
     font-size: 1.5vw; 
 }
 
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 500px) {
 .usernamebox1{
-    font-size: 3vw;
+    font-size: 2.9vw;
+    padding-top: 3.5%;
 }
 .usernamebox{
-    font-size: 3vw; 
+    font-size: 2.9vw; 
+    padding-top: 3.5%;
 }
 .titletext{
     font-size: 3.8vw; 
@@ -69,6 +75,7 @@
 .logOutButton{
     font-size: 3.8vw; 
 }
+
 
 }
 
@@ -90,9 +97,9 @@
 .chatBoxDiv{
     width: 85%;
      height: 65vh;
-    
+      /* border: 1px solid green;  */
       overflow-y: scroll;
-       position: relative;
+       /* position: relative; */
         padding: 2%;
         background-color: #ddeef8;
 }
