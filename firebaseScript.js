@@ -1,14 +1,16 @@
 
 
   // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDYQxoFMDV5gKie-E8zg_lz6CCXHcYOvcM",
-    authDomain: "notion-it-chat.firebaseapp.com",
-    projectId: "notion-it-chat",
-    storageBucket: "notion-it-chat.appspot.com",
-    messagingSenderId: "432618414673",
-    appId: "1:432618414673:web:0ec827619226dae0f0ce70"
+  const firebaseConfig = {
+    apiKey: "AIzaSyBq1m5uk57_5VU_JKP5BfCD2tawahiaRwo",
+    authDomain: "notion-chat-e5142.firebaseapp.com",
+    projectId: "notion-chat-e5142",
+    storageBucket: "notion-chat-e5142.appspot.com",
+    messagingSenderId: "1032788325348",
+    appId: "1:1032788325348:web:1efaad7cb2b1004c6b8df1",
+    measurementId: "G-JM9W089ZK3"
   };
+
 
   // Initialize Firebase
   var app = firebase.initializeApp(firebaseConfig);
