@@ -93,8 +93,8 @@ function displayData(item) {
   var username = JSON.parse(localStorage.getItem("userName")).resUser;
   if (item.userName == username) {
     messageDiv.innerHTML = `
-        <div class="myMessageBox messageShowingBox" style=" background-color: green;">
-        <div class="usernamebox">
+        <div class="myMessageBox messageShowingBox" style=" background-color: green; padding:5px;">
+        <div class="usernamebox" style="padding:5px;">
         <img width="20px" height=20px src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>${item.userName} ,</small></p>
             <p><small>${time1.toLocaleString("en-US")}</small></p>
@@ -106,8 +106,8 @@ function displayData(item) {
     `;
   } else if (item.userName == undefined) {
     messageDiv.innerHTML = `
-        <div class="userMessageBox messageShowingBox" style=" background-color:teal; ">
-        <div class="usernamebox1">
+        <div class="userMessageBox messageShowingBox" style=" background-color:teal; padding:5px; ">
+        <div class="usernamebox1" style="padding:5px;">
         <img width="20px" height=20px  position: absolute; src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>Anonymous ,</small></p>
             <p><small>${time1.toLocaleString("en-US")}</small></p>
@@ -119,8 +119,8 @@ function displayData(item) {
     `;
   } else {
     messageDiv.innerHTML = `
-        <div class="userMessageBox messageShowingBox" style=" background-color:teal;">
-        <div class="usernamebox1">
+        <div class="userMessageBox messageShowingBox" style=" background-color:teal; padding:5px;">
+        <div class="usernamebox1" style="padding:5px;">
         <img width="20px" height=20px src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>${item.userName} ,</small></p>
             <p><small>${time1.toLocaleString("en-US")}</small></p>
