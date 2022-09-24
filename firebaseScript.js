@@ -68,13 +68,15 @@ function sendChatData()
 
 //**function for get all message data from firebase**//
 function getAllMessageData(){
- 
+  var containchat=document.getElementById("showChatBox");
    db.collection("chat").orderBy("time").onSnapshot(allMessage => {
     document.getElementById("showChatBox").innerHTML=""
     allMessage.forEach(item => {
       // console.log(item.data());
+     
       displayData(item.data())
     })
+    containchat.scrollTop = containchat.scrollHeight; //code for auto scroll to see new message on chatbox
     
 })
 
@@ -86,14 +88,14 @@ function displayData(item){
   var containchat=document.getElementById("showChatBox");
    var time1=new Date(item.time)
   //  console.log(time1.toLocaleString('en-US'))
-  containchat.scrollTop = containchat.scrollHeight; //code for auto scroll to see new message on chatbox
+  
 
   var messageDiv=document.createElement("div");
   
   var username = JSON.parse(localStorage.getItem("userName")).resUser;
   if (item.userName == username) {
     messageDiv.innerHTML = `
-        <div class="myMessage messageBox" style=" background-color: green;">
+        <div class="myMessageBox messageShowingBox" style=" background-color: green;">
         <div class="usernamebox">
         <img width="20px" height=20px src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>${item.userName} ,</small></p>
@@ -108,7 +110,7 @@ function displayData(item){
   }
   else if (item.userName == undefined) {
     messageDiv.innerHTML = `
-        <div class="userMessage messageBox" style=" background-color:teal; ">
+        <div class="userMessageBox messageShowingBox" style=" background-color:teal; ">
         <div class="usernamebox1">
         <img width="20px" height=20px  position: absolute; src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>Anonymous ,</small></p>
@@ -123,7 +125,7 @@ function displayData(item){
   }
   else {
     messageDiv.innerHTML = `
-        <div class="userMessage messageBox" style=" background-color:teal;">
+        <div class="userMessageBox messageShowingBox" style=" background-color:teal;">
         <div class="usernamebox1">
         <img width="20px" height=20px src="./personIcon/baseline_account_circle_black_24dp.png" alt="">
             <p><small>${item.userName} ,</small></p>

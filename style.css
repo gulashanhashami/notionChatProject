@@ -1,142 +1,140 @@
-*{
-    font-family: sans-serif;
+* {
+  font-family: sans-serif;
 }
-.userMessage{
-    float: left;
-    /* text-align: start; */
-    padding-right: 2%;
-
+.userMessageBox {
+  float: left;
+  /* text-align: start; */
+  padding-right: 2%;
 }
-.myMessage{
-    float: right;
-    /* text-align: end; */
-    padding-right: 2%;
-}
-
-.messageBox{
-   
-    width: 60%;
-   height: auto;
-    /* border: 1px solid grey; */
-   margin: auto;
-   vertical-align: middle;
-   /* border:1px solid red; */
-   margin-top: 1.5%;
-   padding-right: 2%;
-   border-radius: 1vw;
-}
-.usernamebox{
-    font-family: sans-serif;
-   display:flex;
-   font-size: 1.2vw;
- color: white;
-   height: 4vh;
-    flex-direction:row; 
-    /* gap:1%;  */
-    align-items: center;
-    /* justify-content: end; */
-    padding-right: 2%;
-    padding-left: 2%;
-    padding-top: 1.5%;
-    border-radius: .3vw;
+.myMessageBox {
+  float: right;
+  /* text-align: end; */
+  padding-right: 2%;
 }
 
-.usernamebox1{
-    font-family: sans-serif;
-    display:flex;
-    font-size: 1.2vw;
-    color: white;
-    height: 4vh;
-     flex-direction:row; 
-     gap:1%; 
-     /* vertical-align:middle; */
-     align-items: center;
-     padding-left: 2%;
-     padding-top: 1.5%;
-     border-radius: .3vw;
-    
- }
- .titletext{
-    font-size: 1.5vw; 
+.messageShowingBox {
+  max-width: 60%;
+  box-sizing: content-box;
+  height: auto;
+  /* border: 1px solid grey; */
+  margin: auto;
+  vertical-align: middle;
+  /* border: 1px solid red; */
+  margin-top: 1.5%;
+  padding-right: 2%;
+  border-radius: 1vw;
+}
+.usernamebox {
+  /* width: fit-content; */
+  font-family: sans-serif;
+  display: flex;
+  font-size: 1.2vw;
+  color: white;
+  height: 4vh;
+  flex-direction: row;
+  /* gap:1%;  */
+  align-items: center;
+  /* justify-content: end; */
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-top: 1.5%;
+  border-radius: 0.3vw;
 }
 
- @media only screen and (max-width: 500px) {
-.usernamebox1{
+.usernamebox1 {
+  font-family: sans-serif;
+  display: flex;
+  font-size: 1.2vw;
+  color: white;
+  height: 4vh;
+  flex-direction: row;
+  gap: 1%;
+  /* vertical-align:middle; */
+  align-items: center;
+  padding-left: 2%;
+  padding-top: 1.5%;
+  border-radius: 0.3vw;
+}
+.titletext {
+  font-size: 1.5vw;
+}
+
+@media only screen and (max-width: 500px) {
+  .usernamebox1 {
     font-size: 2.9vw;
     padding-top: 3.5%;
-}
-.usernamebox{
-    font-size: 2.9vw; 
+  }
+  .usernamebox {
+    font-size: 2.9vw;
     padding-top: 3.5%;
-}
-.titletext{
-    font-size: 3.8vw; 
-}
-.logOutButton{
-    font-size: 3.8vw; 
-}
-
-
+  }
+  .titletext {
+    font-size: 3.8vw;
+  }
+  .logOutButton {
+    font-size: 3.8vw;
+  }
 }
 
-
-.messageData{
-
-    color: white;
-   padding-left: 2%;
-   padding-right: 10px;
+.messageData {
+  /* border: 1px solid blue; */
+  color: white;
+  padding-left: 2%;
+  padding-right: 10px;
 }
-.chatPopupDiv{
-    width: 99%; 
-    height: 85vh; 
-    margin-top: 4%;
-    padding-bottom: 2%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: #ddeef8;
+.chatPopupDiv {
+  width: 99%;
+  height: 85vh;
+  margin-top: 4%;
+  padding-bottom: 2%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #ddeef8;
 }
-.chatBoxDiv{
-    width: 85%;
-     height: 65vh;
-      /* border: 1px solid green;  */
-      overflow-y: scroll;
-       /* position: relative; */
-        padding: 2%;
-        background-color: #ddeef8;
+.chatBoxDiv {
+  width: 85%;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid green;  */
+  overflow-y: scroll;
+  /* position: relative; */
+  padding: 2%;
+  background-color: #ddeef8;
 }
-.enterMessageDiv{
-    width: 70%;
-    margin: auto;
-     height:7vh;
-      border:.1vw solid gray;
-       margin-top: 2%;
-        display: flex; 
-        flex-direction: row;
-         justify-content: space-between;
-          padding-left: 2%;
-          border-radius: .3vw;
-          background-color: white;
+.enterMessageDiv {
+  width: 70%;
+  margin: auto;
+  height: 7vh;
+  border: 0.1vw solid gray;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 2%;
+  border-radius: 0.3vw;
+  background-color: white;
 }
-.messageInputBox{
-    width: 95%; 
-    height:88%;
-    border-top: none;
-    border-bottom: none;
-    padding-left: 2%;
-    outline: none;
-    border-right: .1vw solid gray;
-    border-left: .1vw solid gray;
+.messageInputBox {
+  width: 95%;
+  height: 88%;
+  border-top: none;
+  border-bottom: none;
+  padding-left: 2%;
+  outline: none;
+  border-right: 0.1vw solid gray;
+  border-left: 0.1vw solid gray;
 }
-.loginPopup{
-    width: 25%;
-     margin-left: 30%;
-      margin-top: 10%;
-       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        padding: 3%;
-        /* color:#668aac; */
+.loginPopup {
+  width: 25%;
+  margin-left: 30%;
+  margin-top: 10%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 3%;
+  /* color:#668aac; */
 }
-.logOutButton{
-    cursor: pointer;
-     font-size: 1.5vw;
-      vertical-align: middle;
-        border-radius: .3vw; 
+.logOutButton {
+  cursor: pointer;
+  font-size: 1.5vw;
+  vertical-align: middle;
+  border-radius: 0.3vw;
 }
